@@ -1097,6 +1097,40 @@ footer{
   outline: none;
 }
 
+.select{
+  display: inline-flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 3rem;
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 2;
+  min-height: 3rem;
+  border-width: 1px;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  --tw-border-opacity: 0;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+  font-weight: 600;
+  border-radius: var(--rounded-btn, 0.5rem);
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1px + 50%), calc(100% - 16px) calc(1px + 50%);
+  background-size: 4px 4px, 4px 4px;
+  background-repeat: no-repeat;
+}
+
+.select[multiple]{
+  height: auto;
+}
+
 .stack{
   display: inline-grid;
   place-items: center;
@@ -1710,6 +1744,47 @@ footer{
   100%{
     transform: translateY(0);
   }
+}
+
+.select:focus{
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: hsl(var(--bc) / 0.2);
+}
+
+.select-disabled,
+  .select:disabled,
+  .select[disabled]{
+  cursor: not-allowed;
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--b2) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2) / var(--tw-bg-opacity));
+  --tw-text-opacity: 0.2;
+}
+
+.select-disabled::-moz-placeholder, .select:disabled::-moz-placeholder, .select[disabled]::-moz-placeholder{
+  color: hsl(var(--bc) / var(--tw-placeholder-opacity));
+  --tw-placeholder-opacity: 0.2;
+}
+
+.select-disabled::placeholder,
+  .select:disabled::placeholder,
+  .select[disabled]::placeholder{
+  color: hsl(var(--bc) / var(--tw-placeholder-opacity));
+  --tw-placeholder-opacity: 0.2;
+}
+
+.select-multiple,
+  .select[multiple],
+  .select[size].select:not([size="1"]){
+  background-image: none;
+  padding-right: 1rem;
+}
+
+[dir="rtl"] .select{
+  background-position: calc(0% + 12px) calc(1px + 50%), calc(0% + 16px) calc(1px + 50%);
 }
 
 .swap-rotate .swap-on,
@@ -3717,6 +3792,7 @@ footer{
 /*Skills*/
 
 #skills .section-content .skill-block{
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
 }
@@ -3728,8 +3804,8 @@ footer{
   }
 }
 
-#skills .section-content #data-analytics,#skills .section-content #web-technologies, #personal-skills{
-  padding-top: 3rem;
+#skills .section-content #personal-skills{
+  margin-bottom: 0px;
 }
 
 #skills .section-content .skills-left{
@@ -4046,6 +4122,55 @@ footer{
 .tags .http-proxy{
   --tw-bg-opacity: 1;
   background-color: rgb(21 94 117 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .python{
+  --tw-bg-opacity: 1;
+  background-color: rgb(48 105 152 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .pandas{
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 4 88 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .numpy{
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 139 190 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .scikit-learn{
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 147 30 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.tags .plotly{
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 24 26 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .jupyter{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 118 38 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .streamlit{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 81 81 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -4542,13 +4667,13 @@ footer{
 
 #project-content #project-description .image img{
   margin: 0px;
+  margin-bottom: 0.5rem;
   border-width: 1px;
   border-color: hsl(var(--s) / var(--tw-border-opacity));
   --tw-border-opacity: 0.2;
 }
 
 #project-content #project-description .title{
-  padding-top: 0.5rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
