@@ -41,7 +41,7 @@
                                 
                                 <svg id="light-mode" class="fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
                             </label>
-                            <a href="https://drive.google.com/file/d/1brzuXyBndF5jURpFBLT5O21u1-WEjas1/view?usp=sharing" target="_blank">
+                            <a href="https://drive.google.com/file/d/1Ylobr8EkH_ItNFlFzsoh77qBVX_64wRO/view?usp=sharing" target="_blank">
                                 <button class="main-button button-effect download-resume">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
                                         <image xlink:href="images/dark/download.svg" width="25" height="25"></image>
@@ -126,23 +126,21 @@
                             <h2>Skills</h2>
                         </div>
                         <div class="section-content">
-                            <div class="skill-block" id="personal-skills">
+                            <!-- Data Science Section -->
+                            <div class="skill-block" id="data-science">
                                 <div class="skills-left">
-                                    <h4 class="mini-title">Personal Skill</h4>
-                                    <h3 class="mini-highlight">Skills that Define Me</h2>
+                                    <h4 class="mini-title">Data Science</h4>
+                                    <h3 class="mini-highlight">Turning Data into Insights</h3>
                                 </div>
                                 <div class="skills-right">
                                     <ul>
-                                        <li class="skill" name="Critical thinking" value="85">
-                                        </li>
-                                        <li class="skill" name="Problem-solving" value="80">
-                                        </li>
-                                        <li class="skill" name="Attention to detail" value="90">
-                                        </li>
-                                        <li class="skill" name="Communication" value="95">
-                                        </li>
-                                        <li class="skill" name="Collaboration" value="95">
-                                        </li>
+                                        <li class="skill" name="Python" value="90"></li>
+                                        <li class="skill" name="NumPy & Pandas" value="90"></li>
+                                        <li class="skill" name="Scikit-learn" value="85"></li>
+                                        <li class="skill" name="TensorFlow" value="80"></li>
+                                        <li class="skill" name="Data Visualization (Matplotlib, Seaborn, Plotly)" value="85"></li>
+                                        <li class="skill" name="SQL" value="80"></li>
+                                        <li class="skill" name="Power BI" value="80"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -153,11 +151,11 @@
                                 </div>
                                 <div class="skills-right">
                                     <ul>
-                                        <li class="skill" name="HtML & CSS" value="98">
+                                        <li class="skill" name="HTML & CSS" value="98">
                                         </li>
                                         <li class="skill" name="JavaScript" value="98"> 
                                         </li>
-                                        <li class="skill" name="Svelte" value="75">
+                                        <li class="skill" name="Svelte & SvelteKit" value="75">
                                         </li>
                                         <li class="skill" name="Tailwind" value="75">
                                         </li>
@@ -171,7 +169,7 @@
                             <div class="skill-block" id="web-technologies">
                                 <div class="skills-left">
                                     <h4 class="mini-title">Web Scraping</h4>
-                                    <h3 class="mini-highlight">Transforming Ideas into Web Marvels</h2>
+                                    <h3 class="mini-highlight">Unveiling Data from the Web</h2>
                                 </div>
                                 <div class="skills-right">
                                     <ul>
@@ -181,9 +179,29 @@
                                         </li>
                                         <li class="skill" name="Cheerio" value="75">
                                         </li>
-                                        <li class="skill" name="Axios" value="75">
+                                        <li class="skill" name="Scrapy" value="75">
                                         </li>
                                         <li class="skill" name="Selenium" value="75">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="skill-block" id="personal-skills">
+                                <div class="skills-left">
+                                    <h4 class="mini-title">Personal Skill</h4>
+                                    <h3 class="mini-highlight">Skills that Define Me</h2>
+                                </div>
+                                <div class="skills-right">
+                                    <ul>
+                                        <li class="skill" name="Curiosity" value="85">
+                                        </li>
+                                        <li class="skill" name="Problem-solving" value="80">
+                                        </li>
+                                        <li class="skill" name="Attention to detail" value="90">
+                                        </li>
+                                        <li class="skill" name="Adaptability" value="95">
+                                        </li>
+                                        <li class="skill" name="Critical Thinking" value="95">
                                         </li>
                                     </ul>
                                 </div>
@@ -197,11 +215,13 @@
                         </div>
                         <div class="section-filters">
                             <div id="daisy-filters">
-                                <input class="btn" type="radio" name="options" aria-label="show all" data-filter="*" checked/>
+                                <input class="btn" type="radio" name="options" aria-label="Show all" data-filter="*" checked/>
+                                <input class="btn" type="radio" name="options" aria-label="ML & DL" data-filter="*" checked/>
+                                <input class="btn" type="radio" name="options" aria-label="Dashboard" data-filter=".other"/>
                                 <input class="btn" type="radio" name="options" aria-label="Website" data-filter=".website"/>
                                 <input class="btn" type="radio" name="options" aria-label="scrapper" data-filter=".scrapper"/>
                                 <input class="btn" type="radio" name="options" aria-label="API" data-filter=".api"/>
-                                <input class="btn" type="radio" name="options" aria-label="other" data-filter=".other"/>
+                            
                             </div>
                         </div>
                         <div class="isotope-container">

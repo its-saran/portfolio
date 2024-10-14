@@ -3728,7 +3728,7 @@ footer{
   }
 }
 
-#skills .section-content #data-analytics,#skills .section-content #web-technologies{
+#skills .section-content #data-analytics,#skills .section-content #web-technologies, #personal-skills{
   padding-top: 3rem;
 }
 
@@ -4548,6 +4548,7 @@ footer{
 }
 
 #project-content #project-description .title{
+  padding-top: 0.5rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
