@@ -4196,6 +4196,34 @@ footer{
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.tags .tensorflow{
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 138 35 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.tags .opencv{
+  --tw-bg-opacity: 1;
+  background-color: rgb(1 247 1 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.tags .mediapipe{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 146 162 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .keras{
+  --tw-bg-opacity: 1;
+  background-color: rgb(201 0 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 /*Qualifications*/
 
 #qualifications .section-title{
